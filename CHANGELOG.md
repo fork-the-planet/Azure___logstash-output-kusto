@@ -1,5 +1,13 @@
 # Changelog
 
+# 2.2.0
+
+- Add opt-in streaming ingestion while preserving queued ingestion as the default.
+- Bound streaming requests by encoded bytes without splitting events, and rely on the Kusto SDK for automatic queued fallback.
+- Add atomic durable spooling, restart recovery, stable source identifiers, final-status quarantine, and streaming metrics.
+- Add bounded worker backpressure, interruptible transient retry cycles, graceful shutdown draining, and proxy support.
+- Secure spool ownership and permissions, reject unsafe paths and symlinks, and support Windows directory-fsync behavior.
+- Preserve committed batches and safely handle missing spool files and completed batch-directory cleanup.
 
 # 2.0.3
 
